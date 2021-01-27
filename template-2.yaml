@@ -1,0 +1,24 @@
+apiVersion: backstage.io/v1alpha1
+kind: Template
+metadata:
+  name: test-template-github-2
+  title: Test Template
+  description: Create a new standalone documentation project
+  tags:
+    - recommended
+    - techdocs
+    - mkdocs
+spec:
+  owner: backstage/techdocs-core
+  templater: cookiecutter
+  type: documentation
+  path: ./template-2
+
+  schema:
+    required:
+      - name
+    properties:
+      name:
+        title: Name
+        type: string
+        description: Unique name of the component
